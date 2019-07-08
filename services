@@ -1,0 +1,128 @@
+Get SSH certification (https) for website:
+
+create a file in cpanel public_html
+.htaccess (file-name)-:
+
+add below code-:
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+how to get own page not found in website
+
+create a file in cpanel public_html
+.htaccess (file-name)-:
+
+add below code-:
+
+ErrorDocument 404 /page-not-found.html
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+how to send mail to the admin in website 
+
+
+1-: create a php file(form.php)
+
+<?php
+    $to = 'khanshadancse@gmail.com';
+    $name = $_POST["name"];
+    $email= $_POST["email"];
+    $subject= $_POST["subject"];
+    $state = $_POST["state"];
+    $city = $_POST["city"];
+    
+
+
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    //$headers .= "From: " . $email . "\r\n"; // Sender's E-mail
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+    $message ='<table style="width:100%">
+        <tr><td>Name: '.$name.'</td></tr>
+        <tr><td>Email: '.$email.'</td></tr>
+        <tr><td>Mobile Number: '.$subject.'</td></tr>
+        <tr><td>State: '.$state.'</td></tr>
+        <tr><td>City: '.$city.'</td></tr>
+        
+    </table>';
+
+    if (@mail($to, $email, $message, $headers))
+    {
+        header("location:http://www.example.com/thankyou.html");
+    }else{
+        header("location:http://www.example.com/error.html");
+    }
+
+?>
+
+
+
+2-: attach php file in html-:
+
+
+
+ <div class="col-lg-8">
+	                    <form class="form-area contact-form text-right" id="myForm" action="form.php" method="post">
+	                        <div class="row">
+	                            <div class="col-lg-6 form-group">
+	                                <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+	                                <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+	                                <input name="subject" placeholder="Enter phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter phone number'" class="common-input mb-20 form-control" required="" type="tel">
+	                            </div>
+	                            <div class="col-lg-6 form-group">
+	                                <textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+	                            </div>
+	                            <div class="col-lg-12">
+	                                <div class="alert-msg" style="text-align: left;"></div>
+	                                <button class="genric-btn primary" style="float: right;">Send Message</button>
+	                            </div>
+	                        </div>
+	                    </form>
+	                </div>
+<script src="form.js"></script>  (attach javascript file in html)
+
+3:-attach javascript file in html (form.js)-:
+
+    // -------   Mail Send ajax
+
+     $(document).ready(function() {
+        var form = $('#myForm'); // contact form
+        var submit = $('.submit-btn'); // submit button
+        var alert = $('.alert-msg'); // alert div for show alert message
+
+        // form submit event
+        formss.on(function(e) {
+            e.preventDefault(); // prevent default form submit
+
+            $.ajax({
+                url: 'form.php', // form action url
+                type: 'POST', // form submit method get/post
+                dataType: 'html', // request type html/json/xml
+                data: form.serialize(), // serialize form data
+                beforeSend: function() {
+                    alert.fadeOut();
+                    submit.html('Sending....'); // change submit button text
+                },
+                success: function(data) {
+                    alert.html(data).fadeIn(); // fade in response data
+                    form.trigger('reset'); // reset form
+                    submit.attr("style", "display: none !important");; // reset submit button text
+                },
+                error: function(e) {
+                    console.log(e)
+                }
+            });
+        });
+    });
