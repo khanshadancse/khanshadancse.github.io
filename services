@@ -156,3 +156,16 @@ https://tympanus.net/Development/DraggableImageStrip/
 auto refresh page after 5 seconds in error pages to index.html
 
  <meta http-equiv="refresh" content="5; URL=http://www.yourdomain.com/yoursite.html">
+ 
+ 
+ 
+ 
+ --------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+add whatsapp to website for both mobile and website-:
+
+ <a href="https://api.whatsapp.com/send?phone=917042671863&text=Hi%20shadan!"></a>
