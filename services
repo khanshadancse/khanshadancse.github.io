@@ -179,3 +179,11 @@ add whatsapp to website for both mobile and website-:
 
 
 https://tympanus.net/codrops/2019/01/31/custom-cursor-effects/
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+Media Query-:
+
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape){}
