@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .gradient {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            background: linear-gradient(to right, #33ccff 0%, #0000ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: grayscale(1);
+            transition: 3s;
+        }
+        h1:hover {
+            filter: grayscale(0);
+            cursor: text;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <picture>
+        <source media="(min-width:650px)" srcset="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <source media="(min-width: 400px)" srcset="https://images.pexels.com/photos/424670/pexels-photo-424670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        <img src="https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    </picture>
+    <picture>
+        <source media="()" srcset="">
+        
+    </picture>
+-->
+    <div class="gradient">
+        <h1>Gradient Color</h1>
+    </div>
+
+</body>
+
+</html>
