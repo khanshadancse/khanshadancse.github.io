@@ -299,3 +299,30 @@ Angular project update from any 2+ version to latest or any-:
 
 
 https://update.angular.io/
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+Payment Gateway #razorpay
+
+
+<form action="#" name="checkout" method="POST">
+            <script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                data-key="<?php echo $razor_pay_api; ?>"
+                data-amount="<?php echo ($total_price+$vat+$shipping)*100; ?>" 
+                data-currency="INR"
+                data-order_id="<?php echo $pro_detail; ?>"
+                data-buttontext="Pay with Razorpay"
+                data-name="<?php echo $user['reg_first_name']; ?>"
+                data-description="<?php echo $user['city']; ?>"
+                data-image="https://companyname.com/img/logo/logo.png"
+                data-prefill.name="<?php echo $user['reg_first_name']; ?>"
+                data-prefill.email="<?php echo $user['reg_email']; ?>"
+                data-theme.color="#114f9f">
+            </script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
