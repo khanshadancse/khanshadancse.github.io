@@ -340,3 +340,84 @@ background animation
 
 
 https://tympanus.net/Tutorials/Blurry/
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+#SSH genrate ssh-keygen
+
+
+
+
+1. You mast have a public key from your mashine stored on github as SSH key here: 
+https://github.com/settings/ssh
+
+How to create ssh key on unix/mac os x:
+ - Open terminal, go to the root typing: $ cd ~ (recommended)
+ - Type: ssh-keygen -t rsa -C "your@email.address"
+ - To secure your ssh key ststem will ask you for passphrase (recommended) but you can skip it also
+ - That's you have the ssh key
+ - Check it with: $ ls -al ~/.ssh
+ - Type: $ cd .ssh
+ - Then open it with: $ less id_rsa.pub
+ - Your ssh key is here and you can copy it to the github, or bitbucket and connect your terminal with online repos.
+More details: 
+https://www.youtube.com/watch?v=5jdalvKzl98
+
+2. Run in terminal
+      $ ssh -T git@github.com
+      # Attempts to ssh to GitHub
+      
+  You may see one of these warnings:
+
+The authenticity of host 'github.com (192.30.252.1)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+
+The authenticity of host 'github.com (192.30.252.1)' can't be established.
+RSA key fingerprint is nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)?
+
+3. Verify that the fingerprint in the message you see matches the following message, then type yes:
+
+Hi username (Your github username)! You've successfully authenticated, but GitHub does not
+provide shell access.
+You may see this error message:
+
+...
+Agent admitted failure to sign using the key.
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+
+DONE!
+
+Note that if you have no public ssh kay(On your github account) you should generate it use
+the steps below:
+
+1. Check your SSH key
+
+$ ls -al ~/.ssh
+# Lists the files in your .ssh directory, if they exist
+
+2. See it in terminal
+$ cat ~/.ssh/id_dsa.pub
+
+3. Copy your public key and paste it to github 
+   (https://github.com/settings/ssh) 
+   
+   
+   
+   
+   --------------------------------------------------------------------------------------------------
