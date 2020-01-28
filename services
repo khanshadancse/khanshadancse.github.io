@@ -430,7 +430,7 @@ $ cat ~/.ssh/id_dsa.pub
    
    
  #php mail attachment code with redirect to other(thankyou/error) page
- 
+ #link example    https://www.tutorialswebsite.com/how-to-send-attachment-in-an-email-on-form-submission-using-php/
  
  first in form attribute action="example.php"
  
@@ -525,7 +525,7 @@ if(mail($toemail, $subject, $email_message, $headers)){
 
 
 #php mail attachment code for same page with msg
- 
+#link example    https://www.tutorialswebsite.com/how-to-send-attachment-in-an-email-on-form-submission-using-php/ 
  
  first in form attribute action=""
  
