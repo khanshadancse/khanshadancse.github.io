@@ -632,3 +632,34 @@ if(mail($toemail, $subject, $email_message, $headers)){
 
 ------------------------------------------------------------------------------------------------------------------
  
+ 
+ 
+ 
+ ajax jquery calling function for RESTAPI
+ 
+ 
+ 
+ 
+      $.ajax({
+
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            url: "Your URL",
+            data: "{}",
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+            },
+            error: function (result) {
+                alert("Error");
+            }
+        });
+
+
+
+---------------------------------------------------------------------------
+
+
+
+
+
