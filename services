@@ -800,3 +800,22 @@ All Page Content Show on page in wordpress (page.php)
 
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+######   Curve Path and color on image   #####
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+    background: -webkit-linear-gradient(rgba(3, 80, 204, 0.8), rgba(3, 80, 204, 0.8)), url("../images/.jpg");
+    background: linear-gradient(rgba(3, 80, 204, 0.8), rgba(3, 80, 204, 0.8)), url("../images/.jpg"); /* The least supported option. */
+    clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 99%);
