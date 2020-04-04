@@ -819,3 +819,140 @@ All Page Content Show on page in wordpress (page.php)
     background: -webkit-linear-gradient(rgba(3, 80, 204, 0.8), rgba(3, 80, 204, 0.8)), url("../images/.jpg");
     background: linear-gradient(rgba(3, 80, 204, 0.8), rgba(3, 80, 204, 0.8)), url("../images/.jpg"); /* The least supported option. */
     clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 99%);
+    
+    
+    
+    
+    
+    
+    -----------------------------------------------------------------------------------------------------------------------------
+    
+    
+    
+    
+    
+    ######################## API CALLING FUNCTION AJAX SIMPLEST ####################################
+    
+    
+    
+    
+    var settings = {
+    "url": " ",
+    "method": "GET",
+    "timeout": 0,
+};
+
+   $.ajax(settings).done(function (response) {
+   console.log(response);
+   )};
+   
+   
+   
+   
+   
+   
+   --------------------------------------------------------------------------------------------------------------------------------
+   
+   
+   
+   
+   
+   
+   ################################ CALL API AJAX WITH JQUERY COMPLETE FUNCTIONS #########################################
+   
+   	<!--//In working condition ajax function-->
+    			<!--/* **************************************** */-->
+  			jQuery.ajax({
+<!--    				url: url,
+<!--    				beforeSend: function(){-->
+    					<!--// alert("start");-->
+    					<!--//console.log("ddddddddddddd");-->
+<!--    					jQuery("#ajaximg").css("display","block");-->
+<!--    				},-->
+<!--    				type: "POST",-->
+<!--    				dataType: "json",-->
+<!--    				data: dataJsons,-->
+<!--    				success: function(){-->
+    					<!--//alert("success")-->
+    					<!--//console.log("eeeeeeeeeee");-->
+<!--    					jQuery("#ajaximg").css("display","none");-->
+<!--    				},-->
+<!--    				complete: function(dataresult){-->
+<!--    				    console.log("fffffffffffff");-->
+    					<!--//console.log("Success:");-->
+<!--    					var resd = dataresult.responseText;-->
+    					<!--//var resData = JSON.stringify(resd);-->
+<!--    					var resjson = JSON.parse(resd);-->
+    					<!--//var resData = JSON.stringify(resjson);-->
+    				 <!--   // 	console.log("##FullDataHotelSearchResultbrackets" +" " +JSON.stringify(resjson.HotelSearchResult["HotelResults"].HotelName));-->
+         <!--   			//var i,hotelName,HotelDescription,HotelAddress,HotelContactNo,HotelPicture,HotelPrice,HotelCurrencyCode;-->
+<!--            			var hotelList;-->
+<!--            			for(i in resjson.HotelSearchResult.HotelResults){-->
+<!--            			    hotelName = JSON.stringify(resjson.HotelSearchResult.HotelResults[i]["HotelName"]);-->
+<!--            			    HotelDescription = JSON.stringify(resjson.HotelSearchResult.HotelResults[i]["HotelDescription"]);-->
+<!--            			    HotelAddress = JSON.stringify(resjson.HotelSearchResult.HotelResults[i]["HotelAddress"]);-->
+<!--            			    HotelContactNo = JSON.stringify(resjson.HotelSearchResult.HotelResults[i]["HotelContactNo"]);-->
+<!--            			    HotelPicture = JSON.stringify(resjson.HotelSearchResult.HotelResults[i]["HotelPicture"]);-->
+<!--            			    HotelPrice = JSON.stringify(resjson.HotelSearchResult.HotelResults[i].Price["RoomPrice"]);-->
+<!--            			    HotelCurrencyCode = JSON.stringify(resjson.HotelSearchResult.HotelResults[i].Price["CurrencyCode"]);-->
+<!--            				console.log("HotelName" +" " +" " +" " +hotelName -->
+<!--            				+"HotelDescription" +" " +" " +" " +HotelDescription-->
+<!--            				+"HotelAddress" +" " +" " +" " +HotelAddress  +" " +" " +" " -->
+<!--            				+"HotelContactNo" +HotelContactNo +" " +" " +" " -->
+<!--            				+"HotelPicture" +" " +" " +" " +HotelPicture+" " +" " +" " -->
+<!--            				+"HotelPrice" +" " +" " +" " +HotelCurrencyCode +HotelPrice-->
+<!--            				);-->
+<!--            				hotelList += `<div  class="hotel-list-view">-->
+<!--                        					<div class="wrapper">-->
+<!--                        						<div class="col-md-4 col-sm-6 switch-img clear-padding">-->
+                        							
+<!--                                                	<img src=`+HotelPicture+`>-->
+                        						
+<!--                        						</div>-->
+<!--                        						<div class="col-md-6 col-sm-6 hotel-info">-->
+<!--                        							<div>-->
+<!--                        								<div class="hotel-header">-->
+<!--                        									<h5><a href="#">`+hotelName+`</a> <span>-->
+<!--                        									</span></h5>-->
+<!--                        									<p><i class="fa fa-map-marker"></i>`+HotelAddress+`<i class="fa fa-phone"></i>`+HotelContactNo+`</p>-->
+<!--                        								</div>-->
+<!--                        								<div class="hotel-desc">-->
+<!--                        									<p>`+HotelDescription+`</p>-->
+<!--                        								</div>-->
+<!--                        							</div>-->
+<!--                        						</div>-->
+<!--                        						<div class="clearfix visible-sm-block"></div>-->
+<!--                        						<div class="col-md-2 rating-price-box text-center clear-padding">-->
+<!--                        							<div class="rating-box">-->
+<!--                        								<div class="tripadvisor-rating">-->
+<!--                        									<img src="`+HotelPicture+`"><span></span>-->
+<!--                        								</div>-->
+<!--                        							</div>-->
+<!--                        							<div class="room-book-box">-->
+<!--                        								<div class="price">-->
+<!--                        									<h5>`+HotelCurrencyCode +HotelPrice+`</h5>-->
+<!--                        								</div>-->
+<!--                        								<div class="book">-->
+<!--                        									<a href="#">Book</a>-->
+<!--                        								</div>-->
+<!--                        							</div>-->
+<!--                        						</div>-->
+<!--                        					</div>-->
+<!--                        				</div>`;-->
+<!--            			}-->
+<!--            			var hotelApiPrint = document.querySelector("#hotelapi");-->
+<!--                        hotelApiPrint.innerHTML = hotelList;-->
+<!--    				},-->
+<!--    				error: function(error){-->
+<!--    					console.log(error);-->
+<!--    				}-->
+<!--    			});-->
+<!--    		},-->
+<!--    		error: function(error){-->
+<!--    			console.log(error);-->
+<!--    		}-->
+<!--    	});-->
+<!--});-->
+
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
