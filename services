@@ -18,6 +18,15 @@ RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
 
 
+------------------------------------------------------------------------------------------------------
+
+##Redirect All Pages to index.html/index.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule .*\.(php|html)$ / [L,R=302]
+
+
 -------------------------------------------------------------------------------------------------------
 
 
