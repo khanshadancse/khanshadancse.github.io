@@ -973,3 +973,11 @@ All Page Content Show on page in wordpress (page.php)
 
     
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Add caption forcefuly in youtube
+
+
+Force Captions On Tag: yt:cc=on
+Embed Code: ?cc_load_policy=1
