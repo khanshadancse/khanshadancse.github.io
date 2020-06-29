@@ -1,3 +1,12 @@
+IF SSl certificate Install but not getting Secure connection.. Bcoz of some files using full path with http.. this problem occur connection are not secure. So need to go into .htaccess
+and paste below code-
+
+
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Get SSH certification (https) for website:
 
 create a file in cpanel public_html
