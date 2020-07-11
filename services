@@ -990,3 +990,32 @@ Add caption forcefuly in youtube
 
 Force Captions On Tag: yt:cc=on
 Embed Code: ?cc_load_policy=1
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+##Click anywhere on screen except to the div to hide at div jquery code-
+------------------------------------------------------------------
+
+
+
+$(document).mouseup(function(e){
+    var content = $('.dropdown-content');
+    var hovereffect = $('.desk_hover_to_show_arrow');
+    var hoverEffectremove = $('.desk_hover_to_show_dropbtn');
+    
+    
+    
+    // If the target of the click isn't the container
+   if(!content.is(e.target) && content.has(e.target).length === 0){
+        content.removeClass('dropdown-content_show');
+       hovereffect.removeClass('desk_hover_to_show_arrow_class');
+       hoverEffectremove.removeClass('desk_hover_to_show_dropbtn_display_arrow');
+    }
+    
+    
+});
