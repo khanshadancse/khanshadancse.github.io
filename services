@@ -1019,3 +1019,36 @@ $(document).mouseup(function(e){
     
     
 });
+
+
+/*GIT COMMENTS*/
+
+
+GIT COMMENTS STEPS--
+
+> find . -name "*.pyc"  -delete
+
+ 
+
+> git rm --cached -r .idea
+
+ 
+
+
+> git add -A
+
+ 
+
+> git commit -m "comment"
+
+ 
+
+> git push origin shadan
+
+ 
+
+> git pull origin master
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
